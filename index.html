@@ -1,38 +1,236 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>My Portfolio</title>
-  <link rel="stylesheet" href="style.css">
+
+  <style>
+    /* ===== Global Styles ===== */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: "Poppins", sans-serif;
+    }
+
+    body {
+      background: #f7f8fc;
+      color: #333;
+      line-height: 1.6;
+    }
+
+    h1, h2, h3 {
+      color: #2c2c54;
+    }
+
+    /* ===== Header ===== */
+    header {
+      background: linear-gradient(135deg, #5b21b6, #7c3aed);
+      color: white;
+      text-align: center;
+      padding: 60px 20px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    }
+
+    header h1 {
+      font-size: 2.5rem;
+      letter-spacing: 1px;
+      margin-bottom: 10px;
+    }
+
+    header p {
+      font-size: 1.1rem;
+      opacity: 0.9;
+    }
+
+    /* ===== Navigation Bar ===== */
+    nav {
+      background: #fff;
+      display: flex;
+      justify-content: center;
+      padding: 15px 0;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    nav a {
+      color: #5b21b6;
+      text-decoration: none;
+      margin: 0 20px;
+      font-weight: 600;
+      transition: 0.3s;
+    }
+
+    nav a:hover {
+      color: #7c3aed;
+      border-bottom: 2px solid #7c3aed;
+      padding-bottom: 3px;
+    }
+
+    /* ===== Section Styling ===== */
+    section {
+      max-width: 900px;
+      margin: 60px auto;
+      background: #ffffff;
+      padding: 40px;
+      border-radius: 12px;
+      box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+    }
+
+    h2 {
+      text-align: center;
+      margin-bottom: 25px;
+      font-size: 1.8rem;
+    }
+
+    /* ===== About Section ===== */
+    #about p {
+      text-align: justify;
+      font-size: 1rem;
+      color: #555;
+    }
+
+    /* ===== Skills Section ===== */
+    #skills ul {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+      gap: 15px;
+      list-style: none;
+      text-align: center;
+    }
+
+    #skills li {
+      background: #ede9fe;
+      color: #3b0764;
+      padding: 12px;
+      border-radius: 8px;
+      font-weight: 500;
+      transition: 0.3s;
+    }
+
+    #skills li:hover {
+      background: #ddd6fe;
+      transform: translateY(-3px);
+    }
+
+    /* ===== Projects Section ===== */
+    .project {
+      background: #fafafa;
+      border-left: 5px solid #7c3aed;
+      padding: 15px 20px;
+      border-radius: 6px;
+      margin-bottom: 15px;
+      transition: 0.3s;
+    }
+
+    .project:hover {
+      background: #f3e8ff;
+    }
+
+    .project h3 {
+      margin-bottom: 8px;
+      color: #5b21b6;
+    }
+
+    /* ===== Contact Section ===== */
+    #contact {
+      text-align: center;
+    }
+
+    #contact a {
+      display: inline-block;
+      margin: 10px;
+      text-decoration: none;
+      color: white;
+      background: #5b21b6;
+      padding: 10px 20px;
+      border-radius: 25px;
+      transition: 0.3s;
+    }
+
+    #contact a:hover {
+      background: #7c3aed;
+    }
+
+    /* ===== Footer ===== */
+    footer {
+      text-align: center;
+      padding: 20px;
+      color: #777;
+      font-size: 0.9rem;
+      background: #f1f1f1;
+      margin-top: 40px;
+    }
+  </style>
 </head>
+
 <body>
+
   <header>
-    <h1>Hi, I'm Jaisre 👋</h1>
-    <p>Student | Developer | Tech Enthusiast</p>
+    <h1>JAISRE R</h1>
+    <p>AI & Cloud Computing Enthusiast | Student | Developer</p>
   </header>
+
+  <nav>
+    <a href="#about">About</a>
+    <a href="#skills">Skills</a>
+    <a href="#projects">Projects</a>
+    <a href="#contact">Contact</a>
+  </nav>
 
   <section id="about">
     <h2>About Me</h2>
-    <p>I am passionate about building projects using AI, web development, and data science.</p>
+    <p>
+      I am a passionate Computer Science student with a strong interest in Artificial Intelligence,
+      Cloud Computing, and Web Development. I love building smart and efficient solutions that help people
+      and simplify technology for everyone.
+    </p>
+  </section>
+
+  <section id="skills">
+    <h2>Skills</h2>
+    <ul>
+      <li>Python</li>
+      <li>Java</li>
+      <li>HTML & CSS</li>
+      <li>Machine Learning</li>
+      <li>Cloud Computing</li>
+      <li>SQL</li>
+    </ul>
   </section>
 
   <section id="projects">
-    <h2>My Projects</h2>
-    <ul>
-      <li>AI-Based Sign Language Translator</li>
-      <li>E-Commerce Database System (SQL)</li>
-      <li>Banking System with Transaction Logs</li>
-    </ul>
+    <h2>Projects</h2>
+
+    <div class="project">
+      <h3>AI-Based Sign Language Translator</h3>
+      <p>Developed a system that recognizes sign language gestures and converts them into text using AI models.</p>
+    </div>
+
+    <div class="project">
+      <h3>Cloud Resource Allocation using FCFS</h3>
+      <p>Simulated resource scheduling in a cloud environment using First Come First Serve algorithm.</p>
+    </div>
+
+    <div class="project">
+      <h3>Smart Voice Quiz Platform</h3>
+      <p>Built an inclusive quiz platform accessible for visually and hearing-impaired learners using voice input.</p>
+    </div>
   </section>
 
   <section id="contact">
     <h2>Contact</h2>
-    <p>Email: jaisre@example.com</p>
+    <a href="mailto:jaisre.ad23@bitsathy.ac.in">📧 Email</a>
+    <a href="https://github.com/yourusername" target="_blank">💻 GitHub</a>
+    <a href="https://linkedin.com/in/yourprofile" target="_blank">🔗 LinkedIn</a>
   </section>
 
   <footer>
-    <p>© 2025 Jaisre R | All Rights Reserved</p>
+    © 2025 JAISRE R | Designed with ❤️ using HTML & CSS
   </footer>
+
 </body>
 </html>
